@@ -11,6 +11,13 @@ public class User {
         this.email = email;
     }
 
+    // Sobrecarga del constructor para aceptar ID como entero
+    public User(int id, String name, String email) {
+        this.id = String.valueOf(id);
+        this.name = name;
+        this.email = email;
+    }
+
     // Getters and Setters
     public String getId() {
         return id;
