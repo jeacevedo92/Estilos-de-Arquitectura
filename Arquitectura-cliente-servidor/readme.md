@@ -55,7 +55,12 @@ Desde el directorio donde se encuentra tu Dockerfile, ejecuta los siguientes com
 
 ```bash
 docker build -t arquitectura-cliente-servidor .
-docker run -p 8080:8080 arquitectura-cliente-servidor
 ```
+Ejecucion
+
+```bash
+docker run -it --rm arquitectura-cliente-servidor
+```
+
 
 

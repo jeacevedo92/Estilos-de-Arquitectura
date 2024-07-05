@@ -56,9 +56,11 @@ Desde el directorio donde se encuentra tu Dockerfile, ejecuta los siguientes com
 
 ```bash
 docker build -t arquitectura-capas .
-docker run -p 8080:8080 arquitectura-capas
 ```
+Ejecucion
 
-Esto construirá la imagen Docker y ejecutará el contenedor exponiendo el puerto 8080, donde puedes acceder a la aplicación.
+```bash
+docker run -it --rm arquitectura-capas
+```
 
 
