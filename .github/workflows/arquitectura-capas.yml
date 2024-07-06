@@ -29,6 +29,9 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file Arquitectura-capas/pom.xml
 
+    - name: Check for JAR file
+      run: ls -la Arquitectura-capas/target/
+
   docker:
     needs: build
     runs-on: ubuntu-latest
@@ -39,11 +42,15 @@ jobs:
     - name: Log in to Docker Hub
       run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
+    - name: Copy JAR for Docker build
+      run: cp Arquitectura-capas/target/Arquitectura-capas-1.0-SNAPSHOT.jar .
+
     - name: Build Docker image
-      run: docker build -t jhonacevedor/arquitectura-capas:latest Arquitectura-capas
+      run: docker build -t jhonacevedor/arquitectura-capas:latest .
 
     - name: Push Docker image
       run: docker push jhonacevedor/arquitectura-capas:latest
+
 
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
