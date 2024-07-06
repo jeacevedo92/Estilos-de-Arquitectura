@@ -31,6 +31,12 @@ jobs:
 
     - name: Check for JAR file
       run: ls -la Arquitectura-capas/target/
+    
+    - name: Upload JAR as artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: app-jar
+        path: Arquitectura-capas/target/Arquitectura-capas-1.0-SNAPSHOT.jar
 
   docker:
     needs: build
@@ -45,11 +51,11 @@ jobs:
     - name: verify artefact
       run: ls Arquitectura-capas
 
-    #- name: Build Docker image
-    #  run: docker build -t jhonacevedor/arquitectura-capas:latest .
+    - name: Build Docker image
+      run: docker build -t jhonacevedor/arquitectura-capas:latest Arquitectura-capas
 
-    #- name: Push Docker image
-    #  run: docker push jhonacevedor/arquitectura-capas:latest
+    - name: Push Docker image
+      run: docker push jhonacevedor/arquitectura-capas:latest
 
 
 
