@@ -39,7 +39,7 @@ Si prefieres ejecutar la aplicación dentro de un contenedor Docker, sigue estos
 1. **Dockerfile**: Utiliza el siguiente Dockerfile para construir la imagen Docker:
    ```dockerfile
    # Usa una imagen base de OpenJDK 11
-   FROM openjdk:11
+   FROM openjdk:17-jdk-slim
 
    # Establece el directorio de trabajo dentro del contenedor
    WORKDIR /app
