@@ -62,5 +62,8 @@ Ejecucion
 ```bash
 docker run -it --rm arquitectura-capas
 ```
+Para ejecutar este ejemplo de arquitectura de capas usted puede usar la imagen que se encuentra en Docker Hub
 
-
+```bash
+docker run -it jhonacevedor/arquitectura-cliente-servidor
+```
