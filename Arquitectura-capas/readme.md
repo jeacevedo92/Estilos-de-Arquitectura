@@ -39,7 +39,7 @@ Si prefieres ejecutar la aplicación dentro de un contenedor Docker, sigue estos
 1. **Dockerfile**: Utiliza el siguiente Dockerfile para construir la imagen Docker:
    ```dockerfile
    # Usa una imagen base de OpenJDK 11
-   FROM openjdk:11
+   FROM openjdk:17-jdk-slim
 
    # Establece el directorio de trabajo dentro del contenedor
    WORKDIR /app
@@ -62,5 +62,8 @@ Ejecucion
 ```bash
 docker run -it --rm arquitectura-capas
 ```
+Para ejecutar este ejemplo de arquitectura de capas usted puede usar la imagen que se encuentra en Docker Hub
 
-
+```bash
+docker run -it jhonacevedor/arquitectura-cliente-servidor
+```

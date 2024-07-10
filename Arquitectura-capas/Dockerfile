@@ -5,7 +5,7 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copia el JAR compilado desde tu máquina local al contenedor en /app
-COPY target/Arquitectura-capas-1.0-SNAPSHOT.jar /app/Arquitectura-capas-1.0-SNAPSHOT.jar
+COPY Arquitectura-capas-1.0-SNAPSHOT.jar /app/Arquitectura-capas-1.0-SNAPSHOT.jar
 
 # Comando para ejecutar la aplicación cuando se inicie el contenedor
 CMD ["java", "-jar", "/app/Arquitectura-capas-1.0-SNAPSHOT.jar"]
