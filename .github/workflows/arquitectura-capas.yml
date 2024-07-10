@@ -51,11 +51,11 @@ jobs:
     - name: verify artefact
       run: ls
 
-    - name: Build Docker image
-      run: docker build -t jhonacevedor/arquitectura-capas:latest Arquitectura-capas
+    #- name: Build Docker image
+    #  run: docker build -t jhonacevedor/arquitectura-capas:latest Arquitectura-capas
 
-    - name: Push Docker image
-      run: docker push jhonacevedor/arquitectura-capas:latest
+    #- name: Push Docker image
+    #  run: docker push jhonacevedor/arquitectura-capas:latest
 
 
 
